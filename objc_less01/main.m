@@ -7,39 +7,84 @@
 
 #import <Foundation/Foundation.h>
 
+
+
+BOOL alphabet(char input) {
+    return ((input >= 'a' && input <= 'z') || (input >= 'A' && input <= 'Z'));
+}
+
+
+int calculateSum(int a, int b) {
+    return a + b;
+}
+
+int calculateSubstr(int a, int b) {
+    return a - b;
+}
+
+int calculateDiv(int a, int b) {
+    return a / b;
+}
+
+int calculateMulti(int a, int b) {
+    return a * b;
+}
+
+int calculateReminder(int a, int b) {
+    return a % b;
+}
+
+int calculate(NSString *method, int a, int b) {
+   
+    if ([method isEqualToString:@"+"]) {
+        return calculateSum(a, b);
+    }
+    else if ([method isEqualToString:@"-"]) {
+        return calculateSubstr(a, b);
+    }
+    else if ([method isEqualToString:@"*"]) {
+        return calculateMulti(a, b);
+    }
+    else if ([method isEqualToString:@"/"]) {
+        return calculateDiv(a, b);
+    }
+    else if ([method isEqualToString:@"%"]) {
+        return calculateReminder(a, b);
+    }
+    else {
+        NSLog(@"Функция не знает переданный метод");
+        return 0;
+    }
+    
+    return a + b;
+
+}
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        int first;
-        int second;
-        
-        printf("Enter first number: ");
-        scanf("%d", &first);
-        
-        printf("Enter second number: ");
-        scanf("%d", &second);
-        
+        // Lesson 2 HW
         
         // Task 1
-        printf("--------Task1--------\n");
-        printf("The sum is %d\n", first + second);
-        printf("The substract is %d\n", first - second);
-        printf("The multiple is %d\n", first * second);
-        printf("The division is %d, with remainder %d\n", first / second, first % second);
+        char input;
+        printf("Enter character: ");
+        scanf("%c", &input);
+        BOOL isAlphabet = alphabet(input);
         
+        printf("Character is in alphabet: %s\n", isAlphabet ? "YES" : "NO");
+        printf("ASCII %i\n", input);
+        printf("------------\n");
         
         // Task 2
-        printf("--------Task2--------\n");
-        NSLog(@"The sum is %i, The substract is %i, The multiple is %i, The division is %i, remainder is %i", first + second, first - second, first * second, first / second, first % second);
-        
-        // Task 3
-        printf("--------Task3--------\n");
-        int random1 = arc4random_uniform(10);
-        int random2 = arc4random_uniform(10);
-        int random3 = arc4random_uniform(10);
-        
-        printf("Three random values %d, %d, %d\n", random1, random2, random3);
-        printf("The AVG is %f\n", ((float)random1 + (float)random2 + (float)random3) / 3);
+        int a = 18;
+        int b = 4;
+        printf("Operands: %i, %i\n", a, b);
+        printf("Sum is %i\n", calculate(@"+", a, b));
+        printf("Subtraction is %i\n", calculate(@"-", a, b));
+        printf("Multiply is %i\n", calculate(@"*", a, b));
+        printf("Devision is %i\n", calculate(@"/", a, b));
+        printf("Reminder is %i\n", calculate(@"%", a, b));
         
     }
     return 0;
