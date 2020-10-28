@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B164E0D125303AFF005EB98B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B164E0D025303AFF005EB98B /* main.m */; };
+		B1B3DA5225495FBB0038B377 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B3DA5125495FBB0038B377 /* Calculator.m */; };
+		B1B3DA58254970090038B377 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B3DA57254970090038B377 /* Bird.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		B164E0CD25303AFF005EB98B /* objc_less01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = objc_less01; sourceTree = BUILT_PRODUCTS_DIR; };
 		B164E0D025303AFF005EB98B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B1B3DA5025495FBB0038B377 /* Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		B1B3DA5125495FBB0038B377 /* Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		B1B3DA56254970090038B377 /* Bird.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
+		B1B3DA57254970090038B377 /* Bird.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				B164E0D025303AFF005EB98B /* main.m */,
+				B1B3DA5025495FBB0038B377 /* Calculator.h */,
+				B1B3DA5125495FBB0038B377 /* Calculator.m */,
+				B1B3DA56254970090038B377 /* Bird.h */,
+				B1B3DA57254970090038B377 /* Bird.m */,
 			);
 			path = objc_less01;
 			sourceTree = "<group>";
@@ -88,7 +98,7 @@
 		B164E0C525303AFF005EB98B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					B164E0CC25303AFF005EB98B = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -119,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B164E0D125303AFF005EB98B /* main.m in Sources */,
+				B1B3DA5225495FBB0038B377 /* Calculator.m in Sources */,
+				B1B3DA58254970090038B377 /* Bird.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +146,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -193,7 +205,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -239,6 +251,7 @@
 		B164E0D525303AFF005EB98B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T2HBBQ5KF9;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -249,6 +262,7 @@
 		B164E0D625303AFF005EB98B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T2HBBQ5KF9;
 				ENABLE_HARDENED_RUNTIME = YES;
